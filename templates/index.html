@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoVis - Algorithm Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>AlgoVis</h1>
+        <p>Algorithm Visualizer</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="text" id="arrayInput" placeholder="Enter numbers e.g. 5,3,8,1,9">
+            <select id="algorithmSelect">
+                <option value="bubble">Bubble Sort</option>
+            </select>
+            <button onclick="startVisualization()">Visualize</button>
+            <button onclick="generateRandom()">Random Array</button>
+        </div>
+
+        <div class="info">
+            <span id="stepInfo">Steps: 0</span>
+        </div>
+
+        <div class="bars-container" id="barsContainer"></div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
